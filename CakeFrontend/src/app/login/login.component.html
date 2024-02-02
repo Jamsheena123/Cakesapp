@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    
+<div class="container h-100 d-flex ">
+    
+   
+
+    <div class="section rounded-3 p-5 shadow login-box">
+       <div class="text-center mb-2">
+         <h1 class="fw-bolder text-center text-white">Login</h1>
+       </div>
+       <form action="" method="post" [formGroup]="loginForm" (ngSubmit)="login()">
+            
+            
+            <div class="mb-2 mt-3 ms-4 ">
+                <input type="text" placeholder="Username" formControlName="username" class="form-control"><br>
+
+            </div>
+            <div class="mb-2 ms-4">
+                <input type="password" placeholder="Password" formControlName="password" class="form-control"><br>
+            </div>
+
+            <div class="button">
+                <button type="submit" [disabled]="loginForm.invalid" class="btn btn-warning ms-4 me-5 text-dark button">Login</button>
+            </div>
+
+
+        </form>
+
+
+    </div>
+
+</div>
+
+
+</body>
+</html>
+<style>
+    /* .container{
+        background-image:url("../../assets/images/front.jpg") ;
+        background-repeat: no-repeat;
+    } */
+    
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: #eaecf1;
+    background-image:url("../../assets/images/front.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.section{
+    margin-left: 65%;
+    margin-top: 10%;
+    
+}
+.button{
+    margin-left: 60px;
+    width: 90px;
+}
+
+</style>
+
